@@ -1,0 +1,111 @@
+.card-md-account {
+    width: 350px;
+    height: 500px;
+    background: linear-gradient(113.96deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    backdrop-filter: blur(100px);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 10px;
+    gap: 8px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-md-account-header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(91.59deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    border-radius: 16px 16px 0px 0px;
+    font-size: 32px;
+    color: #31577a;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.card-md-account-section {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px 24px;
+    overflow-y: scroll;
+}
+
+.card-md-account-error {
+    background-color: #ffbfbfb9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.card-md-account-error-description {
+    font-family: "Source Sans Pro", "Courier New", Courier, monospace;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-md-account-loading {
+    border: 10px solid #f3f3f39c;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 60px;
+    height: 60px;
+    margin-top: 64px;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    animation: spin 1s ease-in-out infinite;
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.card-md-account-error-linking {
+    margin-top: 8px;
+    color: #31577a;
+    font-weight: 600;
+    font-family: "Source Sans Pro", "Courier New", Courier, monospace;
+    cursor: pointer;
+
+    &:hover {
+        color: #076dcc;
+    }
+}
+
+.card-md-account-footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 24px;
+}
+
+.card-md-account-footer-content {
+    font-size: 20px;
+    color: #31577a;
+    cursor: pointer;
+
+    &:hover {
+        color: #076dcc;
+    }
+}

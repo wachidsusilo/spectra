@@ -1,0 +1,17 @@
+
+.chart-spectrometer {
+    box-sizing: border-box;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    transition: all 0.3s ease-in-out;
+
+    @media only screen and (min-width: 1280px) {
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+    }
+    
+    @media only screen and (min-width: 1600px) {
+        width: calc(100% - 64px);
+        height: calc(100% - 64px);
+        }
+}

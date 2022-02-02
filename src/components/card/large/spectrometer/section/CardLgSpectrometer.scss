@@ -1,0 +1,87 @@
+:root {
+    --card-lg-spectrometer-width: 200px;
+}
+
+.card-lg-spectrometer {
+    width: calc(100% - 128px);
+    height: calc(var(--card-lg-spectrometer-width) * 0.5);
+    background: linear-gradient(113.96deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    transition: all 0.3s ease-in-out;
+    z-index: 50;
+
+    @media only screen and (max-width: 1600px) {
+        @media only screen and (min-height: 732px) {
+            height: calc(var(--card-lg-spectrometer-width) * 0.6);
+        }
+    }
+
+    @media only screen and (max-width: 1400px) {
+        @media only screen and (min-height: 732px) {
+            height: calc(var(--card-lg-spectrometer-width) * 0.7);
+        }
+    }
+
+    @media only screen and (max-width: 1280px) {
+        width: calc(100% - 96px);
+        height: calc(var(--card-lg-spectrometer-width) * 0.55);
+
+        @media only screen and (min-height: 732px) {
+            height: calc(var(--card-lg-spectrometer-width) * 0.8);
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        margin-top: 64px;
+        height: calc(var(--card-lg-spectrometer-width) * 0.6);
+
+        @media only screen and (min-height: 732px) {
+            height: calc(var(--card-lg-spectrometer-width) * 0.8);
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: 64px;
+        height: calc(var(--card-lg-spectrometer-width) * 0.6);
+
+        @media only screen and (min-height: 732px) {
+            height: calc(var(--card-lg-spectrometer-width) * 0.8);
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: calc(100% - 64px);
+        margin-top: 96px;
+        height: var(--card-lg-spectrometer-width);
+
+        @media only screen and (min-height: 732px) {
+            height: calc(var(--card-lg-spectrometer-width) * 0.8);
+            margin-top: -64px;
+            height: var(--card-lg-spectrometer-width);
+        }
+    }
+}
+
+.card-lg-spectrometer-loader {
+    position: absolute;
+    width: 0;
+    height: 5px;
+    top: 60px;
+    left: 0;
+    background: #076dcc;
+    transition: width 1s linear;
+}
+
+.card-lg-spectrometer-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

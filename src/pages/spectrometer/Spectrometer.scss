@@ -1,0 +1,39 @@
+.spectrometer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+
+    @media only screen and (max-width: 1000px) {
+        position: relative;
+        grid-template-columns: 1fr;
+    }
+}
+
+.spectrometer-helper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.spectrometer-header {
+    display: none;
+
+    @media only screen and (max-width: 1000px) {
+        display: flex;
+        z-index: 200;
+    }
+}
+
+.spectrometer-section {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

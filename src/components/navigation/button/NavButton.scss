@@ -1,0 +1,43 @@
+
+.button-nav-rect {
+    width: 60px;
+    height: 41px;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    margin-top: 96px;
+    background: linear-gradient(90.22deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    backdrop-filter: blur(100px);
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        .button-nav-menu-color {
+            fill: #076dcc;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        left: 0;
+    }
+}
+
+.button-nav-menu {
+    width: 25px;
+    height: 25px;
+    margin-right: 16px;
+}
+
+.button-nav-rect-hide {
+    left: -60px;
+}
+
+.button-nav-rect-show {
+    @media only screen and (max-width: 1000px) {
+        left: 0;
+    }
+}

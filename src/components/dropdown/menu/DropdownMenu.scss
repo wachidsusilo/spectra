@@ -1,0 +1,19 @@
+
+.dropdown-menu {
+    position: absolute;
+    box-sizing: border-box;
+    width: 150px;
+    max-height: 185px;
+    top: 34px;
+    left: 0;
+    cursor: context-menu;
+    background: linear-gradient(113.96deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
+    transition: all 0.15s ease-in-out;
+}
+
+.dropdown-menu-no-scroll {
+    overflow-y: hidden;
+}

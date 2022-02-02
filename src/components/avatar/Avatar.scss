@@ -1,0 +1,14 @@
+:root {
+    --avatar-width: 0;
+}
+
+.avatar {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--avatar-width) * 0.5);
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    transition: all 0.5s ease-out;
+}

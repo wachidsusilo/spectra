@@ -1,0 +1,99 @@
+.header {
+    position: absolute;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.header-rect {
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    background: linear-gradient(90.22deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+
+    @media only screen and (min-width: 1281px) {
+        border-radius: 0px 0px 8px 8px;
+    }
+}
+
+.header-logo {
+    height: 40px;
+    margin-top: 4px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.header-logo:hover {
+    .header-logo-color {
+        fill: #076dcc;
+    }
+}
+
+.header-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.header-profile-name {
+    font-size: 24px;
+    color: #31577a;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.header-profile-name:hover {
+    color: #076dcc;
+}
+
+.header-profile-picture {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header-profile-picture-border {
+    box-shadow: 0 0 0 2px rgba(255, 254, 254, 0.5)
+}
+
+.header-action {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.header-action-icon {
+    height: 30px;
+    cursor: pointer;
+    
+    &:first-child {
+        margin-right: 8px;
+    }
+
+    &:first-child:hover {
+        .header-action-icon-color:first-child {
+            fill: #076dcc;
+        }
+    }
+    
+    &:last-child:hover {
+        .header-action-icon-color:last-child {
+            fill: #076dcc;
+        }
+    }
+}

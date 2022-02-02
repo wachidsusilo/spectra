@@ -1,0 +1,29 @@
+
+.not-found {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-rect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -40vh;
+}
+
+.not-found-title {
+    font-size: 128px;
+    margin: 0;
+    color: #ffffff77;
+    letter-spacing: 4px;
+}
+
+.not-found-description {
+    margin: 0;
+    font-size:48px;
+    color: #ffffff77;
+    margin-top: -8px;
+}

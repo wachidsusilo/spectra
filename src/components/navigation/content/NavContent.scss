@@ -1,0 +1,213 @@
+.nav {
+    position: relative;
+    box-sizing: border-box;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(90.22deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 200px 1fr 50px;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.2);
+    z-index: 50;
+
+    @supports not (backdrop-filter: blur(100px)) {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("../../../assets/png/background.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        height: calc(100% - 80px);
+        margin-top: 80px;
+        grid-template-rows: 200px 1fr 50px;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        transition: all 0.2s ease-out;
+    }
+}
+
+.nav-hide {
+    @media only screen and (max-width: 1000px) {
+        left: -300px;
+    }
+}
+
+.nav-show {
+    @media only screen and (max-width: 1000px) {
+        left: 0;
+    }
+}
+
+.nav-header {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90.22deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.nav-logo {
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.nav-logo:hover {
+    .nav-logo-color {
+        fill: #076dcc;
+    }
+}
+
+.nav-header-action {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.nav-header-action-icon {
+    height: 30px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    
+    &:nth-child(1n):hover {
+        .nav-header-action-icon-color:nth-child(1n) {
+            fill: #076dcc;
+        }
+    }
+}
+.nav-profile {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-profile-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    margin-top: 16px;
+    margin-right: 16px;
+    transform: scale(0);
+
+    @media only screen and (max-width: 1000px) {
+        transform: scale(1);
+    }
+
+    &:hover {
+        .nav-profile-close-color {
+            fill: #076dcc;
+            fill-opacity: 1;
+        }
+    }
+}
+
+.nav-profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nav-profile-picture-border {
+    box-shadow: 0 0 0 3px rgba(255, 254, 254, 0.5);
+}
+
+.nav-profile-name {
+    font-size: 24px;
+    margin: 12px 0 0 0;
+    color: #31577a;
+}
+
+.nav-history {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100vh - 330px);
+    overflow: hidden;
+}
+
+.nav-history-header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90.22deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #31577a;
+    padding-left: 16px;
+}
+
+.nav-history-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.nav-history-section {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+}
+
+.nav-logout {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90.22deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    display: flex;
+    align-items: center;
+}
+
+.nav-logout-picture {
+    width: 30px;
+    height: 30px;
+    margin-left: 16px;
+}
+
+.nav-logout-name {
+    font-size: 24px;
+    margin: 12px 0 0 0;
+    color: #31577a;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.nav-logout-name:hover {
+    color: #076dcc;
+}

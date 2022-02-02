@@ -1,0 +1,97 @@
+.dropdown-item {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid #31577a28;
+
+    &-light {
+        border-bottom: 1px solid #ffffff9c;
+    }
+
+    &:last-child {
+        border: none;
+    }
+
+    &:hover {
+        background: rgba(132, 250, 211, 0.5);
+    }
+
+    &-light:hover {
+        background: #31577a80;
+    }
+
+    &-enabled {
+        cursor: pointer;
+    }
+
+    &-enabled:hover {
+        .dropdown-item-icon-color {
+            fill: #076dcc;
+        }
+
+        .dropdown-item-icon-color-light {
+            fill: rgba(43, 255, 184, 0.801);
+        }
+
+        .dropdown-item-title {
+            color: #076dcc;
+        }
+
+        .dropdown-item-title-content-light {
+            color: rgba(43, 255, 184, 0.801);
+        }
+
+        .dropdown-item-title-lock-icon-color {
+            fill: #076dcc;
+        }
+    }
+}
+
+.dropdown-item-icon {
+    box-sizing: border-box;
+    width: 16px;
+    height: 15px;
+    
+    &-color-light {
+        fill: white;
+    }
+}
+
+.dropdown-item-title {
+    box-sizing: border-box;
+    height: 100%;
+    width: calc(100% - 8px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    &-content {
+        box-sizing: border-box;
+        width: 100%;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #31577a;
+
+        &-light {
+            color: #ffffffea;
+        }
+
+        &-disabled {
+            color: #6e6e6e !important;
+        }
+    }
+
+    &-lock-icon {
+        width: 30px;
+        height: 14px;
+    }
+}

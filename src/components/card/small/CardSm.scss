@@ -1,0 +1,64 @@
+.card-sm {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(113.96deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    border-radius: 16px;
+    backdrop-filter: blur(100px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-sm:hover{
+    .card-sm-icon-rotate {
+        transform: rotate(360deg) scale(1.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-sm-icon-flip {
+        transform: scale(1.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-sm-bottom {
+        color: #076dcc;
+    }
+}
+
+.card-sm-top {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-sm-icon {
+    height: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: all 0.3s ease-in-out;
+
+    @media only screen and (max-width: 800px) {
+        height: 80px;
+    }
+}
+
+.card-sm-bottom {
+    height: 80px;
+    width: 100%;
+    color: #31577a;
+    font-size: 32px;
+    background: linear-gradient(91.59deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 100%);
+    border-radius: 0px 0px 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 800px) {
+        height: 60px;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,292 @@
+.rectangle-container {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.rectangle-size {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    color: white;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+
+        &-label {
+            margin-right: 4px;
+        }
+    
+        &-value {
+            width: 40px;
+            height: 17px;
+            margin-right: 4px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            background: #ffffff1c;
+        }
+
+    }
+}
+
+.rectangle-legend {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    color: white;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+
+    &-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-container {
+            display: flex;
+            align-items: center;
+            margin-top: 4px;
+            margin-right: 8px;
+
+            &-label {
+                margin-right: 4px;
+            }
+
+            &-input {
+                width: 44px;
+                border: none;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 13px;
+                color: white;
+                text-align: center;
+                background: #ffffff1c;
+                border-radius: 2px;
+
+                & + & {
+                    margin-left: 4px;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 0 1px #ffffff6c;
+                }
+            }
+
+            &-right {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.rectangle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 10px;
+    top: 10px;
+    box-shadow: 0 0 0 2px #076dcc, 0 0 0 1500px #31577a9c;
+
+    &-container {
+        &-1 {
+            position: absolute;
+            top: -16px;
+            left: calc(50% - 15px);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: n-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-2 {
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: ne-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-3 {
+            position: absolute;
+            top: calc(50% - 15px);
+            right: -16px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: e-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-4 {
+            position: absolute;
+            bottom: -16px;
+            right: -16px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: se-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-5 {
+            position: absolute;
+            bottom: -16px;
+            left: calc(50% - 15px);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: s-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-6 {
+            position: absolute;
+            bottom: -16px;
+            left: -16px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: sw-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-7 {
+            position: absolute;
+            top: calc(50% - 15px);
+            left: -16px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: w-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-8 {
+            position: absolute;
+            top: -16px;
+            left: -16px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: nw-resize;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &-9 {
+            position: absolute;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: move;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &-dot {
+        &-1 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-2 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-3 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-4 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-5 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-6 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-7 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-8 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+
+        &-9 {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: #076dcc;
+        }
+    }
+}

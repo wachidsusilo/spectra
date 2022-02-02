@@ -1,0 +1,107 @@
+
+.card-lg-uploader-seek {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 16px;
+
+    &-container {
+        box-sizing: border-box;
+        width: 100%;
+        height: 6px;
+        margin-bottom: 8px;
+        border-radius: 3px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.3);
+
+        &-foreground {
+            height: 100%;
+            top: 0;
+            border-radius: 3px;
+            position: absolute;
+            background: #31577a;
+
+            &-circle {
+                &-left {
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: -2px;
+                    left: 0;
+                    border-radius: 5px;
+                    background: #31577a;
+                    cursor: w-resize;
+                    z-index: 100;
+
+                    &-hover:hover {
+                        .card-lg-uploader-seek-left-tooltip {
+                            display: flex !important;
+                        }
+                    }
+                }
+
+                &-right {
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: -2px;
+                    right: 0;
+                    border-radius: 5px;
+                    background: #31577a;
+                    cursor: e-resize;
+                    z-index: 100;
+
+                    &-hover:hover {
+                        .card-lg-uploader-seek-right-tooltip {
+                            display: flex !important;
+                        }
+                    }
+                }
+
+                &-tooltip {
+                    position: absolute;
+                    width: 80px;
+                    height: 20px;
+                    top: 15px;
+                    border-radius: 4px;
+                    background: #31577a9c;
+                    font-family: 'Source Sans Pro';
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: white;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 100;
+                }
+            }
+        }
+
+        &-label {
+            &-left {
+                position: absolute;
+                font-family: 'Source Sans Pro';
+                font-weight: 600;
+                font-size: 12px;
+                bottom: 10px;
+                left: 0;
+                color: #31577a;
+                white-space: nowrap;
+            }
+
+            &-right {
+                position: absolute;
+                font-family: 'Source Sans Pro';
+                font-weight: 600;
+                font-size: 12px;
+                bottom: 10px;
+                right: 0;
+                color: #31577a;
+                white-space: nowrap;
+            }
+        }
+    }
+}
